@@ -1,0 +1,17 @@
+AllCops:
+  TargetRubyVersion: 2.3
+
+Metrics/LineLength:
+  Max: 120
+
+Metrics/BlockLength:
+  Exclude:
+    - 'test/**/*.rb'
+
+# Dont require parentheses at the def block
+Style/MethodDefParentheses:
+  EnforcedStyle: require_no_parentheses
+
+# Disable this cop to avoid the 'frozen_string_literal: true' comment on top of every file.
+Style/FrozenStringLiteralComment:
+  Enabled: false

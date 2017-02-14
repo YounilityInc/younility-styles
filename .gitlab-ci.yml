@@ -1,0 +1,47 @@
+variables:
+  ARTIFACTS: "$CI_PROJECT_NAME-build$CI_BUILD_ID-artifacts"
+  GEMCACHE: "10.250.2.142:9292"
+  GEM_KEY: "pxGqrqLIqvldcFtm1kqcBzIZS0UR1AV8nyKwnFInJbDlYFN5gQ251VD3Lovj16kfCMRtz"
+
+before_script: [ "mkdir $ARTIFACTS" ]
+
+stages: [ "test", "publish" ]
+
+.jobTemplate: &jobTemplate
+  image: ruby:2.3.3
+  artifacts:
+    when: always
+    paths:
+      - "$ARTIFACTS/"
+    expire_in: "2 weeks"
+  cache:
+    key: "buildCache-$CI_PROJECT_ID"
+    paths:
+      - vendor/bundle
+  tags: [ "docker" ]
+
+rakeTest:
+  <<: *jobTemplate
+  stage: test
+  script:
+    - gem install bundler
+    - bundle config mirror.https://rubygems.org http://$GEMCACHE
+    - bundle install --clean --path=vendor/bundle --jobs=4 --retry=3
+    - bundle exec rake test
+
+rubocop:
+  <<: *jobTemplate
+  stage: test
+  script:
+    - gem install bundler
+    - bundle config mirror.https://rubygems.org http://$GEMCACHE
+    - bundle install --clean --path=vendor/bundle --jobs=4 --retry=3
+    - bundle exec rubocop
+
+
+buildAndPublish:
+  <<: *jobTemplate
+  when: manual
+  dependencies: [ ] # don't try and download "artifacts"
+  stage: publish
+  script: [ "sh -c \"$CI_PROJECT_DIR/tools/ci-buildAndPublishGem.sh\"" ]
