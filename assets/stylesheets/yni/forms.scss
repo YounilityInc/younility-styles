@@ -1,0 +1,51 @@
+//Form overrides & extensions for Bootstrap 4 styles
+
+.form-control:focus {
+  border: $input-btn-border-width solid $input-border-color;
+  outline: none;
+}
+
+.btn:active,
+.btn:focus {
+  outline: 0;
+}
+
+.form-group label {
+  @include font-bold();
+
+  &[for]::after {
+    content: ':';
+  }
+}
+
+//Boostrap 4 changed from .has-error to .has-danger, making them equal.
+.has-error {
+  @extend .has-danger;
+}
+
+// Class is rails generated and donesn't follow our naming format
+// scss-lint:disable SelectorFormat
+.validation-error,
+.field_with_errors .form-control {
+  border: 1px solid $brand-danger;
+}
+
+.bordered-element {
+  border: 1px solid #ccc;
+}
+
+.bordered-element-top {
+  border-top: 1px solid #ccc;
+}
+
+.btn-white {
+  background-color: #fff;
+}
+
+.no-border-radius {
+  border-radius: 0;
+}
+
+.ws-errorbox p {
+  color: $brand-danger;
+}

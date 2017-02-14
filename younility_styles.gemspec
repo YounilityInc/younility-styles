@@ -1,11 +1,11 @@
 # coding: utf-8
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
-require 'younility/styles/version'
+require 'younility_styles/version'
 
 Gem::Specification.new do |spec|
-  spec.name          = 'younility-styles'
-  spec.version       = Younility::Styles::VERSION
+  spec.name          = 'younility_styles'
+  spec.version       = YounilityStyles::VERSION
   spec.authors       = ['David Underwood']
   spec.email         = ['david.underwood@younility.com']
 
@@ -34,4 +34,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'byebug'
   spec.add_development_dependency 'minitest-reporters'
   spec.add_development_dependency 'rubocop'
+
+  spec.add_runtime_dependency 'bootstrap', '4.0.0.alpha4'
 end

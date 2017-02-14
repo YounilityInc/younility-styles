@@ -1,0 +1,82 @@
+//Younility Helper SCSS
+
+//Kill margin and padding for all breakpoints
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    .kill-#{$breakpoint}-padding {
+      @include kill-padding();
+    }
+
+    .kill-#{$breakpoint}-margin {
+      @include kill-margin();
+    }
+  }
+}
+
+.kill-underline:hover,
+.kill-underline:active {
+  text-decoration: none;
+}
+
+//Small and tiny padding for all breakpoints
+@each $breakpoint in map-keys($grid-breakpoints) {
+  @include media-breakpoint-up($breakpoint) {
+    .sm-#{$breakpoint}-padding {
+      @include sm-padding();
+    }
+
+    .xs-#{$breakpoint}-padding {
+      @include xs-padding();
+    }
+  }
+}
+
+//Responsive Images
+.img-fluid {
+  display: block;
+  width: 100% \9; // ie 9 fix
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
+//Small dropdown class
+.dropdown-menu-sm {
+  font-size: $font-size-sm;
+}
+
+//truncate classes - used for multiple lines
+.truncate-text {
+  word-wrap: break-word;
+  white-space: normal;
+}
+
+.truncate-line {
+  white-space: nowrap;
+  overflow-x: hidden;
+  text-overflow: ellipsis;
+}
+
+//Small Initials
+
+.initials-sm {
+  float: left;
+  background: $light-text;
+  border-radius: 3px;
+  text-transform: uppercase;
+  height: 1.3rem;
+  width: 1.3rem;
+  display: block;
+  line-height: 1.3rem;
+  text-align: center;
+
+  + span {
+    float: left;
+    line-height: 1.3rem;
+    margin-left: 5px;
+  }
+}
+
+.assignee {
+  text-transform: capitalize;
+}

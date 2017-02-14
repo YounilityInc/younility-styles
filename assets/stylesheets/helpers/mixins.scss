@@ -1,0 +1,272 @@
+//Younility Mixins SCSS
+
+//Kill margin and padding for all breakpoints
+@mixin kill-margin {
+  margin: 0 !important;
+}
+
+@mixin kill-padding {
+  padding: 0 !important;
+}
+
+@mixin sm-padding {
+  padding: .5rem;
+}
+
+@mixin xs-padding {
+  padding: .25rem;
+}
+
+//Font Weights
+@mixin font-light() {
+  font-weight: 300;
+  font-style: normal;
+}
+
+@mixin font-regular() {
+  font-weight: 400;
+  font-style: normal;
+}
+
+@mixin font-medium() {
+  font-weight: 500;
+  font-style: normal;
+}
+
+@mixin font-semibold() {
+  font-weight: 600;
+  font-style: normal;
+}
+
+@mixin font-bold() {
+  font-weight: 700;
+  font-style: normal;
+}
+
+@mixin font-black() {
+  font-weight: 900;
+  font-style: normal;
+}
+
+@mixin card-box($width: 'full') {
+  @if $width == 'half' {
+    @extend .col-xl-4;
+    @extend .col-lg-6;
+    @extend .col-md-6;
+  }
+
+  else {
+    @extend .col-xl-12;
+  }
+
+  background-color: $card-background;
+  border: 1px solid $card-border;
+  padding: 1rem;
+
+  h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .button-group {
+    text-align: right;
+    margin-bottom: 0;
+  }
+}
+
+//Text & Background Circle ex. (6)
+@mixin text-and-circle($font-color, $background-color) {
+  background-color: $background-color;
+  border-radius: 10px;
+  color: $font-color;
+  padding: 1px 5px;
+  margin: 0;
+  text-align: center;
+  width: auto;
+  @include font-bold();
+}
+
+// Two Column Templates
+
+// Left aside - the aside is on the left hand side. Right aside would be the aside on the right
+@mixin left-aside() {
+  aside {
+    @extend .col-md-4;
+    @extend .col-lg-3;
+    padding: 0;
+
+    @include media-breakpoint-up(md) {
+      padding-right: .5rem;
+    }
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 1rem;
+    }
+
+    // Toggle Button to collapse the aside
+    .toggle {
+      @extend .hidden-sm-down;
+      position: absolute;
+      right: 0;
+      z-index: 10;
+      border: 1px solid $light-grey;
+      background: $white;
+      margin-top: 10px;
+      cursor: pointer;
+
+      .slide-open {
+        display: none;
+      }
+
+      .slide-close {
+        display: block;
+      }
+    }
+
+    .btn-container {
+      margin: 1rem 0;
+
+      .cta-btn {
+        @extend .btn;
+        @extend .btn-sm;
+        @extend .btn-primary;
+        @extend .btn-block;
+      }
+    }
+  }
+
+  &.collapsed aside {
+    @extend .col-md-2;
+    @extend .col-lg-2;
+
+    .toggle {
+      .slide-open {
+        display: block;
+      }
+
+      .slide-close {
+        display: none;
+      }
+    }
+
+    .list-group {
+      li {
+        a {
+          padding-left: 1rem;
+
+          @include media-breakpoint-up(lg) {
+            padding-left: 2rem;
+          }
+
+          &.parent {
+            padding-left: .5rem;
+
+            @include media-breakpoint-up(lg) {
+              padding-left: 1rem;
+            }
+          }
+        }
+      }
+    }
+
+    .cta-btn span + span {
+      @extend .hidden-md-down;
+    }
+  }
+}
+
+// Right section - the section is on the right hand side. Left section would be the section on the left
+@mixin right-section () {
+  section {
+    @extend .col-md-8;
+    @extend .col-lg-9;
+    padding: 0;
+
+    @include media-breakpoint-up(md) {
+      padding-left: .5rem;
+    }
+
+    >div {
+      @extend .col-xs-12;
+      @include kill-padding();
+      border: 1px solid $light-grey;
+      background: $white;
+
+      h2 {
+        font-size: 1rem;
+        border-bottom: 1px solid $light-grey;
+        padding-bottom: .5rem;
+      }
+
+      p,
+      label {
+        margin-bottom: .1rem;
+      }
+
+      label {
+        @include font-bold();
+      }
+
+      .full-width {
+        @extend .col-xs-12;
+        @include kill-padding();
+      }
+
+      .half-width {
+        @extend .col-lg-6;
+        @extend .col-md-12;
+        @include kill-padding();
+
+        @include media-breakpoint-up(lg) {
+          padding-bottom: 1rem;
+        }
+
+        &:first-child {
+          @include media-breakpoint-up(lg) {
+            padding-right: 0;
+          }
+        }
+
+        + .half-width {
+          @include media-breakpoint-down(md) {
+            margin-bottom: 1rem;
+          }
+        }
+      }
+
+      .full-block {
+        @extend .col-xs-12;
+        background: $white;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+
+        @include media-breakpoint-up(md) {
+          margin-bottom: 0;
+        }
+
+        .half {
+          @extend .col-xs-6;
+          @include kill-padding();
+          margin-bottom: 1rem;
+        }
+
+        .full {
+          @extend .col-xs-12;
+          @include kill-padding();
+          margin-bottom: 1rem;
+        }
+      }
+    }
+  }
+
+  &.collapsed section {
+    @extend .col-md-10;
+    @extend .col-lg-10;
+  }
+}
+
+@mixin aside-section-template() {
+  @include left-aside();
+  @include right-section();
+}

@@ -1,0 +1,13 @@
+//Nav overrides & extensionsfor Bootstrap 4 styles
+
+.nav-tabs .nav-item + .nav-item,
+.show-task .task-info .nav-item + .nav-item {
+  margin-left: 0;
+}
+
+.nav-tabs .nav-link,
+.show-task .task-info .nav-link {
+  border: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}

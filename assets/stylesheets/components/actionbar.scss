@@ -1,0 +1,81 @@
+// styles used for the action bar used on the "Live" page
+
+.action-bar {
+  background-color: $brand-accent;
+  color: $light-text;
+
+  .btn {
+    border-radius: 0;
+  }
+
+  @media (max-width: 47.9em) {
+    display: flex;
+    flex-flow: column;
+  }
+
+  #new-and-date {
+    display: inline-block;
+
+    @media (max-width: 47.9em) {
+      width: 100%;
+      order: 2;
+    }
+
+    #new-task {
+      padding-bottom: .3rem;
+
+      @media (max-width: 47.9em) {
+        width: 50%;
+    }
+  }
+
+    #datepicker {
+      display: inline-block;
+      font-size: $default-font-size;
+
+      .date {
+        vertical-align: middle;
+      }
+    }
+  }
+
+  #views {
+    display: inline-block;
+
+    @media (max-width: 47.9em) {
+      width: 100%;
+      border-bottom: .1em solid #5b5f6a;
+      order: 1;
+    }
+
+    button {
+      background-color: $brand-accent;
+      color: inherit;
+      border-color: #5b5f6a;
+      border-left-width: .1em;
+      border-style: none none none solid;
+      width: 6.5em;
+      padding-top: .4em;
+      padding-bottom: .4em;
+
+      &:hover {
+        z-index: 0;
+        background-color: $brand-primary-hover;
+        color: #fff;
+      }
+
+      @media (max-width: 47.9em) {
+        width: 25%;
+
+        &:first-child {
+          border-style: none;
+        }
+      }
+    }
+
+    .current {
+      background-color: $brand-primary;
+      color: #fff;
+    }
+  }
+}

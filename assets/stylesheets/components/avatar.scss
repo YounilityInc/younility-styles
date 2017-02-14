@@ -1,0 +1,16 @@
+// styles for user avatars
+
+.big-avatar {
+  width: 2em;
+  height: 2em;
+  border-radius: 3px;
+  background-color: $light-icon;
+
+  //used for initials temporarily
+  .initials {
+    color: $text-colour;
+    font-size: 1rem;
+    padding-top: .25rem;
+    letter-spacing: 1px;
+  }
+}

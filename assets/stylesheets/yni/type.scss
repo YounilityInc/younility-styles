@@ -1,0 +1,13 @@
+//Type overrides & extensionsfor Bootstrap 4 styles
+
+h1 {
+  @extend h3;
+  font-weight: normal;
+  margin-bottom: 1rem;
+}
+
+//Ensure strong is the same style as our bold font
+strong,
+b {
+  @include font-bold();
+}

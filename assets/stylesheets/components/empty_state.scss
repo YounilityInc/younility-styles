@@ -1,0 +1,17 @@
+//Empty State
+
+.empty-state {
+  text-align: center;
+
+  .empty-icon {
+    width: 125px;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    fill: $text-disabled;
+  }
+
+  p {
+    color: $text-disabled;
+    font-size: 1.5rem;
+   }
+}
