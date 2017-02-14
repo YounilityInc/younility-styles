@@ -34,6 +34,8 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'byebug'
   spec.add_development_dependency 'minitest-reporters'
   spec.add_development_dependency 'rubocop'
+  spec.add_development_dependency 'rails', '~> 4.2'
+  spec.add_development_dependency 'sqlite3'
 
   spec.add_runtime_dependency 'bootstrap', '4.0.0.alpha4'
 end

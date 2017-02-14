@@ -7,6 +7,7 @@ Metrics/LineLength:
 Metrics/BlockLength:
   Exclude:
     - 'test/**/*.rb'
+    - 'younility_styles.gemspec'
 
 # Dont require parentheses at the def block
 Style/MethodDefParentheses:
