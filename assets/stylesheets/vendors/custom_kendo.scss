@@ -669,7 +669,7 @@ td.k-state-focused.k-state-selected {
 
 .k-grid tbody:empty::before,
 .k-grid tbody:empty::before {
-    content: 'No available records.';
+    content: 'No results found.';
     float: left;
     width: 300px;
     padding: .4em .6em;
