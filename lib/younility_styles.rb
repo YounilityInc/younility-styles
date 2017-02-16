@@ -5,7 +5,12 @@ require 'younility_styles/version'
 module YounilityStyles
   class << self
     def load!
-      register_rails_engine
+      if rails?
+        register_rails_engine
+      elsif sprockets?
+        register_sprockets
+      end
+
       configure_sass
     end
 
@@ -26,6 +31,15 @@ module YounilityStyles
       @assets_path ||= File.join gem_path, 'assets'
     end
 
+    # Environment detection helpers
+    def sprockets?
+      defined?(::Sprockets)
+    end
+
+    def rails?
+      defined?(::Rails)
+    end
+
     private
 
     def configure_sass
@@ -35,6 +49,11 @@ module YounilityStyles
 
     def register_rails_engine
       require 'younility_styles/engine'
+    end
+
+    def register_sprockets
+      Sprockets.append_path(stylesheets_path)
+      Sprockets.append_path(javascripts_path)
     end
   end
 end
