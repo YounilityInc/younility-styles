@@ -7,6 +7,13 @@
 
   .navbar-toggler {
     color: $light-text;
+    float: left;
+    outline: 0;
+
+    .glyphicons {
+      font-size: 1.5em;
+      padding-top: .15em;
+    }
   }
 
   .navbar-brand-logo {
@@ -21,10 +28,29 @@
     }
   }
 
-  .glyphicons-menu-hamburger {
-    font-size: 1.5em;
-    padding-top: .15em;
+  .navbar-toggleable-sm {
+    @include media-breakpoint-down(sm) {
+      width: 100%;
+      float: left;
+      clear: both;
+    }
   }
+
+  .glyphicons-menu-hamburger {
+    display: none;
+  }
+
+  .collapsed {
+    .glyphicons-menu-hamburger {
+      display: inline-block;
+    }
+
+    .glyphicons-remove {
+      display: none;
+    }
+  }
+
+
 
   .navbar-nav {
     .nav-icon {

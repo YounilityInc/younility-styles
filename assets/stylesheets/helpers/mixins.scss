@@ -270,3 +270,16 @@
   @include left-aside();
   @include right-section();
 }
+
+@mixin dialog-variant($background, $text) {
+  .modal-header {
+    background-color: $background;
+    color: $text;
+  }
+
+  .btn-dialog {
+    background-color: $background;
+    border-color: $background;
+    color: $white;
+  }
+}

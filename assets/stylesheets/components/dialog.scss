@@ -1,0 +1,32 @@
+.dialog {
+  .modal-dialog {
+    max-width: 380px;
+
+    .modal-header .dialog-icon {
+      height: 30px;
+      width: 30px;
+      margin-right: 1rem;
+      float: left;
+
+      path {
+        fill: $white;
+      }
+    }
+  }
+}
+
+.dialog-danger {
+  @include dialog-variant($brand-danger, $white);
+}
+
+.dialog-warning {
+  @include dialog-variant($brand-warning, $white);
+}
+
+.dialog-info {
+  @include dialog-variant($brand-info, $white);
+}
+
+.dialog-question {
+  @include dialog-variant($brand-info, $white);
+}

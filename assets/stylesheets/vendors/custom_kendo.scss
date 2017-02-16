@@ -662,3 +662,17 @@ td.k-state-focused.k-state-selected {
     background-color: $kendo-grid-tr-hover;
   }
 }
+
+.k-grid-filter.k-state-active {
+  background-color: $kendo-grid-tr-hover;
+}
+
+.k-grid tbody:empty::before,
+.k-grid tbody:empty::before {
+    content: 'No available records.';
+    float: left;
+    width: 300px;
+    padding: .4em .6em;
+    line-height: 2.2em;
+    height: 2.2em;
+  }
