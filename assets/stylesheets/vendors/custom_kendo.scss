@@ -676,3 +676,16 @@ td.k-state-focused.k-state-selected {
     line-height: 2.2em;
     height: 2.2em;
   }
+
+.k-datetimepicker {
+  width: 100%;
+
+  .k-state-focused {
+    border: $input-btn-border-width solid $input-border-color;
+    box-shadow: none;
+    outline: none;
+  }
+  .k-state-default {
+    box-shadow: none;
+  }
+}

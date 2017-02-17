@@ -23,6 +23,13 @@
   @extend .has-danger;
 }
 
+.has-success .k-datetimepicker .k-picker-wrap {
+  border-color: $brand-success;
+}
+.has-success .bootstrap-select .btn {
+  border-color: $brand-success;
+}
+
 // Class is rails generated and donesn't follow our naming format
 // scss-lint:disable SelectorFormat
 .validation-error,
