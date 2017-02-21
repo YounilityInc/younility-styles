@@ -1,4 +1,5 @@
 require 'bootstrap'
+require 'parsley-rails'
 require 'younility_styles/version'
 
 # Encapsulates front-end styles

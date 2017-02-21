@@ -18,41 +18,31 @@
   }
 }
 
+.parsley-errors-list {
+  list-style-type: none;
+  margin-bottom: 0.25rem;
+  padding-left: 0;
+  color: $brand-danger;
+  float: left;
+  width: 100%;
+
+  li {
+    margin-top: 0.25rem;
+  }
+}
+
 //Boostrap 4 changed from .has-error to .has-danger, making them equal.
 .has-error {
   @extend .has-danger;
 }
 
-.has-success .k-datetimepicker .k-picker-wrap {
-  border-color: $brand-success;
-}
+.has-success .k-datetimepicker .k-picker-wrap,
 .has-success .bootstrap-select .btn {
   border-color: $brand-success;
 }
 
-// Class is rails generated and donesn't follow our naming format
-// scss-lint:disable SelectorFormat
-.validation-error,
-.field_with_errors .form-control {
-  border: 1px solid $brand-danger;
+.has-error .k-datetimepicker .k-picker-wrap,
+.has-error .bootstrap-select .btn {
+  border-color: $brand-danger;
 }
 
-.bordered-element {
-  border: 1px solid #ccc;
-}
-
-.bordered-element-top {
-  border-top: 1px solid #ccc;
-}
-
-.btn-white {
-  background-color: #fff;
-}
-
-.no-border-radius {
-  border-radius: 0;
-}
-
-.ws-errorbox p {
-  color: $brand-danger;
-}
