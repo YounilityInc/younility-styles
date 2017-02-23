@@ -39,5 +39,4 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'mini_racer'
 
   spec.add_runtime_dependency 'bootstrap', '4.0.0.alpha4'
-  spec.add_runtime_dependency 'parsley-rails'
 end
