@@ -1,0 +1,113 @@
+# Place for all helper functions to avoid repeating code in different files
+# To add stuff to this file:
+# - Make sure the function can be static and requires no
+#   class members or variables
+# - Make sure the function is used in more than one other javascript class
+
+class @KendoGridHelper
+  constructor: (url, initialData, callback) ->
+    initialRequest = true
+    @dataSource = new (kendo.data.DataSource)(
+      serverFiltering: true
+      serverSorting: true
+      serverPaging: true
+      pageSize: 10
+      page: 1
+      transport:
+        read: (options) ->
+          if initialRequest
+            initialRequest = false
+            options.success initialData
+          else
+            $.ajax
+              url: url
+              data: KendoGridHelper.datasourceParametermap options.data
+              success: (ajaxResult) ->
+                options.success ajaxResult
+                if callback
+                  callback()
+              complete: (jqXHR) ->
+                if jqXHR.status == 401
+                  location.reload()
+      schema:
+        data: 'data'
+        total: 'total'
+        model: fields:
+          created_at: type: 'date'
+          begins_at: type: 'date'
+          ends_at: type: 'date'
+          invitation_accepted_at: type: 'date'
+          id: type: 'integer'
+          state: type: 'list'
+          users_name: type: 'list'
+          user_name: type: 'list'
+          created_by_name: type:'list'
+        )
+
+  initializeGrid: (options) ->
+    # Required options: selector, template_html, sortable,
+    # pageable, filterable and columns
+    if options.filterable
+      filterableOptions = {
+        extra: false
+        operators:
+          string:
+            cont: '<%= I18n.t("kendo.filtering.contains") %>'
+            eq: '<%= I18n.t("kendo.filtering.equal_to") %>'
+          date:
+            eq: '<%= I18n.t("kendo.filtering.equal_to") %>'
+            lt: '<%= I18n.t("kendo.filtering.before") %>'
+            gt: '<%= I18n.t("kendo.filtering.after") %>'
+            lteq: '<%= I18n.t("kendo.filtering.before_equal_to") %>'
+            gteq: '<%= I18n.t("kendo.filtering.after_equal_to") %>'
+          integer:
+            eq: '<%= I18n.t("kendo.filtering.equal_to") %>'
+          list:
+            eq: '<%= I18n.t("kendo.filtering.equal_to") %>'
+      }
+    else
+      filterableOptions = false
+
+    if options.pageable
+      pageableOptions = {
+        messages: empty: '<%= I18n.t("kendo.grid.empty") %>'
+      }
+    else
+      pageableOptions = false
+
+    # Configure Kendo Grid
+    $(options.selector).kendoGrid
+      dataSource: @dataSource
+      rowTemplate: kendo.template(options.template_html)
+      sortable: options.sortable
+      pageable: pageableOptions
+      filterable: filterableOptions
+      columns: options.columns
+
+  @datasourceParametermap: (data) ->
+    paramsData = {}
+    # Pagination Parameter
+    if data.page
+      paramsData['page'] = data.page
+
+    # Filter Parameters
+    if data.filter
+      search = {}
+
+      $.each data.filter.filters, (k, v) ->
+        if v.field == 'created_at' || v.field == 'ends_at' || v.field == 'begins_at'
+          text = v.field + '_' + v.operator
+          search[text] = moment(v.value).toISOString()
+        else
+          text = v.field + '_' + v.operator
+          search[text] = v.value
+
+      paramsData['search'] = search
+
+    # Sort Parameter
+    if data.sort
+      $.each data.sort, (k, v) ->
+        paramsData['order_attr'] = v.field
+        paramsData['order_dir'] = v.dir
+
+    return paramsData
