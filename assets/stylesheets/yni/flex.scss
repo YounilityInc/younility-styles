@@ -1,0 +1,14 @@
+// Flexbox classes until we update boostrap
+
+.d-flex {
+  display: flex;
+  flex-direction: row;
+}
+
+.justify {
+  justify-content: space-between;
+}
+
+.align-items-center {
+  align-items: center;
+}

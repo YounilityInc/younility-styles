@@ -80,3 +80,68 @@
 .assignee {
   text-transform: capitalize;
 }
+.full-width {
+  @extend .col-xs-12;
+  @include kill-padding();
+}
+
+.half-width {
+  @extend .col-lg-6;
+  @extend .col-md-12;
+  @include kill-padding();
+
+  @include media-breakpoint-up(lg) {
+    padding-bottom: 1rem;
+  }
+
+  &:first-child {
+    @include media-breakpoint-up(lg) {
+      padding-right: 0;
+    }
+  }
+
+  + .half-width {
+    @include media-breakpoint-down(md) {
+      margin-bottom: 1rem;
+    }
+  }
+
+  .full-block {
+    @extend .col-xs-12;
+    background: $white;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+    margin-bottom: 1rem;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 0;
+    }
+
+    h2 {
+      font-size: 1rem;
+      border-bottom: 1px solid $light-grey;
+      padding-bottom: .5rem;
+    }
+
+    p,
+    label {
+      margin-bottom: .1rem;
+    }
+
+    label {
+      @include font-bold();
+    }
+
+    .half {
+      @extend .col-xs-6;
+      @include kill-padding();
+      margin-bottom: 1rem;
+    }
+
+    .full {
+      @extend .col-xs-12;
+      @include kill-padding();
+      margin-bottom: 1rem;
+    }
+  }
+}

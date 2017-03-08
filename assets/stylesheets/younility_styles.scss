@@ -21,14 +21,17 @@
 @import 'components/empty_state';
 @import 'components/topnav';
 @import 'components/dialog';
+@import 'components/status_badge';
 
 //younilty bootstrap overrides & extentions
 @import 'yni/type';
-@import 'yni/forms';
 @import 'yni/alert';
-@import 'yni/nav';
-@import 'yni/list-group';
 @import 'yni/buttons';
+@import 'yni/flex';
+@import 'yni/forms';
+@import 'yni/list-group';
+@import 'yni/modal';
+@import 'yni/nav';
 
 // vendor styles
 @import 'vendors/custom_kendo';
