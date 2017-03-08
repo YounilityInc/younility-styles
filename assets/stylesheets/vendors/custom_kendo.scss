@@ -676,17 +676,6 @@ td.k-state-focused.k-state-selected {
 
 .k-grid-header th.k-header {
   vertical-align: middle;
-
-  >.k-link {
-    padding: 0;
-    line-height: 3rem;
-  }
-
-  >.k-grid-filter {
-    height: 3rem;
-    line-height: 3rem;
-    padding: 0 0.2rem;
-  }
 }
 
 .k-grid-filter.k-state-active {
@@ -702,7 +691,7 @@ td.k-state-focused.k-state-selected {
   content: 'No results found.';
   float: left;
   width: 300px;
-  padding: .4rem .6rem;
+  padding-left: .5rem;
   line-height: 3rem;
   height: 3rem;
 }
