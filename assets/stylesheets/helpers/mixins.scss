@@ -77,13 +77,12 @@
 //Text & Background Circle ex. (6)
 @mixin text-and-circle($font-color, $background-color) {
   background-color: $background-color;
-  border-radius: 10px;
+  border-radius: 50%;
   color: $font-color;
   padding: 1px 5px;
   margin: 0;
   text-align: center;
   width: auto;
-  @include font-bold();
 }
 
 // Two Column Templates
@@ -191,72 +190,6 @@
       @include kill-padding();
       border: 1px solid $light-grey;
       background: $white;
-
-      h2 {
-        font-size: 1rem;
-        border-bottom: 1px solid $light-grey;
-        padding-bottom: .5rem;
-      }
-
-      p,
-      label {
-        margin-bottom: .1rem;
-      }
-
-      label {
-        @include font-bold();
-      }
-
-      .full-width {
-        @extend .col-xs-12;
-        @include kill-padding();
-      }
-
-      .half-width {
-        @extend .col-lg-6;
-        @extend .col-md-12;
-        @include kill-padding();
-
-        @include media-breakpoint-up(lg) {
-          padding-bottom: 1rem;
-        }
-
-        &:first-child {
-          @include media-breakpoint-up(lg) {
-            padding-right: 0;
-          }
-        }
-
-        + .half-width {
-          @include media-breakpoint-down(md) {
-            margin-bottom: 1rem;
-          }
-        }
-      }
-
-      .full-block {
-        @extend .col-xs-12;
-        background: $white;
-        padding-top: 1rem;
-        padding-bottom: 1rem;
-        margin-bottom: 1rem;
-
-        @include media-breakpoint-up(md) {
-          margin-bottom: 0;
-        }
-
-        .half {
-          @extend .col-xs-6;
-          @include kill-padding();
-          margin-bottom: 1rem;
-        }
-
-        .full {
-          @extend .col-xs-12;
-          @include kill-padding();
-          margin-bottom: 1rem;
-        }
-      }
     }
   }
 
@@ -282,4 +215,18 @@
     border-color: $background;
     color: $white;
   }
+}
+
+@mixin status-badge ($background) {
+  display: inline-block;
+  padding: .25em .4em;
+  font-size: 85%;
+  line-height: 1;
+  text-transform: uppercase;
+  color: $white;
+  text-align: center;
+  white-space: nowrap;
+  vertical-align: baseline;
+  border-radius: .25rem;
+  background-color: $background;
 }

@@ -1,0 +1,33 @@
+// Status Badges
+
+.badge-created {
+  @include status-badge($status-created);
+}
+
+.badge-dispatched {
+  @include status-badge($status-dispatched);
+}
+
+.badge-assigned {
+  @include status-badge($status-assigned);
+}
+
+.badge-accepted {
+  @include status-badge($status-accepted);
+}
+
+.badge-closed {
+  @include status-badge($status-closed);
+}
+
+.badge-delivered {
+  @include status-badge($status-delivered);
+}
+
+.badge-verified {
+  @include status-badge($status-verified);
+}
+
+.badge-started {
+  @include status-badge($status-started);
+}

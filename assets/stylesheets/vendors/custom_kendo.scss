@@ -654,13 +654,28 @@ td.k-state-focused.k-state-selected {
 .k-spreadsheet-popup .k-state-active {
     background-color: $kendo-accent
 }
+
 .k-grid {
+  table {
+    font-size: $font-size-sm;
+    min-width: map-get($grid-breakpoints, xl);
+  }
+
+  tr {
+    height: 45px;
+  }
+
   tfoot td:only-child {
     border-bottom: 0;
   }
+
   tr:hover {
     background-color: $kendo-grid-tr-hover;
   }
+}
+
+.k-grid-header th.k-header {
+    vertical-align: middle;
 }
 
 .k-grid-filter.k-state-active {
@@ -669,13 +684,13 @@ td.k-state-focused.k-state-selected {
 
 .k-grid tbody:empty::before,
 .k-grid tbody:empty::before {
-    content: 'No results found.';
-    float: left;
-    width: 300px;
-    padding: .4em .6em;
-    line-height: 2.2em;
-    height: 2.2em;
-  }
+  content: 'No results found.';
+  float: left;
+  width: 300px;
+  padding: .4em .6em;
+  line-height: 2.2em;
+  height: 2.2em;
+}
 
 .k-datetimepicker {
   width: 100%;
