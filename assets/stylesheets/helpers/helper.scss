@@ -145,3 +145,22 @@
     }
   }
 }
+
+.flex-group {
+  @extend .d-flex;
+  @extend .justify;
+  @extend .align-items-center;
+
+  div:first-child {
+    @extend .text-truncate;
+  }
+  div:last-child {
+    flex-shrink: 0;
+    padding-left: 1rem;
+  }
+}
+
+.count {
+  @include text-and-circle($white, $light-grey);
+}
+
