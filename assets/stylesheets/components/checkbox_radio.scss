@@ -46,7 +46,7 @@
 }
 
 .disabled [type='checkbox'],
-[type='checkbox']:disabled, {
+[type='checkbox']:disabled {
   + span::before {
     background: url($disabled-checkbox-image-path) center no-repeat;
   }
