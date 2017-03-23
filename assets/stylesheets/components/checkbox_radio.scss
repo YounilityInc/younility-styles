@@ -25,7 +25,7 @@
 }
 
 .disabled [type='radio'],
-[type='radio'].disabled, {
+[type='radio']:disabled {
   + span::before {
     background: url($disabled-radio-image-path) center no-repeat;
   }
@@ -46,7 +46,7 @@
 }
 
 .disabled [type='checkbox'],
-[type='checkbox'].disabled, {
+[type='checkbox']:disabled, {
   + span::before {
     background: url($disabled-checkbox-image-path) center no-repeat;
   }
