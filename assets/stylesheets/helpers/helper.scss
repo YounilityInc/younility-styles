@@ -80,8 +80,9 @@
 .assignee {
   text-transform: capitalize;
 }
+
 .full-width {
-  @extend .col-xs-12;
+  @extend .col-sm-12;
   @include kill-padding();
 }
 
@@ -107,7 +108,7 @@
   }
 
   .full-block {
-    @extend .col-xs-12;
+    @extend .col-sm-12;
     background: $white;
     padding-top: 1rem;
     padding-bottom: 1rem;
@@ -133,14 +134,16 @@
     }
 
     .half {
-      @extend .col-xs-6;
       @include kill-padding();
+      width: 50%;
+      float: left;
       margin-bottom: 1rem;
     }
 
     .full {
-      @extend .col-xs-12;
       @include kill-padding();
+      width: 100%;
+      float: left;
       margin-bottom: 1rem;
     }
   }
@@ -154,6 +157,7 @@
   div:first-child {
     @extend .text-truncate;
   }
+
   div:last-child {
     flex-shrink: 0;
     padding-left: 1rem;

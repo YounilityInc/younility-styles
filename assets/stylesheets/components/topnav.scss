@@ -1,11 +1,12 @@
 // styles for navigation bar
 
 .navbar {
+  @include kill-padding();
   background-color: $brand-accent-dk;
-  border-radius: 0;
   font-size: 1rem;
 
   .navbar-toggler {
+    @include kill-padding();
     color: $light-text;
     float: left;
     outline: 0;
@@ -22,17 +23,13 @@
     margin-bottom: .4rem;
     margin-left: 1rem;
 
+    @include media-breakpoint-down(sm) {
+      margin-left: 5rem;
+    }
+
     > svg {
       height: 2em;
       display: block;
-    }
-  }
-
-  .navbar-toggleable-sm {
-    @include media-breakpoint-down(sm) {
-      width: 100%;
-      float: left;
-      clear: both;
     }
   }
 
@@ -49,8 +46,6 @@
       display: none;
     }
   }
-
-
 
   .navbar-nav {
     .nav-icon {
@@ -74,7 +69,13 @@
       padding: .7rem .9rem .7rem .5rem;
 
       .nav-link {
+        @include kill-padding();
         display: table;
+        color: rgba(255, 255, 255, .5);
+
+        &.small-icon span {
+          padding-top: .3rem;
+        }
 
         span {
           display: table-cell;
@@ -93,12 +94,19 @@
 
     .active {
       background-color: darken($brand-accent-dk, 8);
+
+      .nav-link {
+        color: $white;
+      }
     }
 
     .dropdown-menu {
       border-radius: 0;
-      margin-top: 0;
       background-color: darken($brand-accent-dk, 8);
+      float: right;
+      right: 0;
+      left: initial;
+      margin-top: 0;
 
       a {
         color: rgba(255, 255, 255, .75);
@@ -113,30 +121,26 @@
     }
   }
 
-  .pull-xs-right {
+  .nav-right {
     padding-right: 1rem;
+    order: 2;
+
+    @include media-breakpoint-down(sm) {
+      -webkit-box-orient: horizontal;
+      flex-direction: row;
+      justify-content: flex-end;
+      order: initial;
+      position: absolute;
+      right: 0;
+      margin-top: .3rem;
+    }
 
     li {
       padding-right: .5rem;
     }
 
-    .small-icon {
-      padding-top: .3rem;
-    }
-
-    .dropdown-menu {
-      left: auto;
-      right: 0;
-    }
-
     .dropdown-divider {
       background-color: rgba(255, 255, 255, .75);
-    }
-
-    .nav-avatar {
-      padding-top: .25em;
-      padding-left: .6em;
-      padding-right: .6em;
     }
   }
 }
