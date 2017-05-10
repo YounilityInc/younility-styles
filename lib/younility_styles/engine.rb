@@ -2,6 +2,7 @@ require 'autoprefixer-rails'
 
 module YounilityStyles
   # Add our assets to Rails using an engine
+
   class Engine < ::Rails::Engine
     initializer 'younility_styles.assets' do |app|
       %w(stylesheets javascripts fonts).each do |sub|
