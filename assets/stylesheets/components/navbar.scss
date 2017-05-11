@@ -5,6 +5,11 @@
   background-color: $brand-accent-dk;
   font-size: 1rem;
 
+  @include media-breakpoint-down(sm) {
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+
   .navbar-toggler {
     @include kill-padding();
     color: $light-text;
@@ -24,7 +29,10 @@
     margin-left: 1rem;
 
     @include media-breakpoint-down(sm) {
-      margin-left: 5rem;
+      width: 50%;
+      padding-left: 5rem;
+      margin: .4rem 0;
+      justify-content: flex-start;
     }
 
     > svg {
@@ -44,6 +52,13 @@
 
     .glyphicons-remove {
       display: none;
+    }
+  }
+
+  #collapsing-navbar,
+  .navbar-nav {
+    @include media-breakpoint-down(sm) {
+      width: 100%;
     }
   }
 
@@ -101,6 +116,7 @@
     }
 
     .dropdown-menu {
+      position: absolute;
       border-radius: 0;
       background-color: darken($brand-accent-dk, 8);
       float: right;
@@ -126,13 +142,10 @@
     order: 2;
 
     @include media-breakpoint-down(sm) {
-      -webkit-box-orient: horizontal;
+      order: initial;
       flex-direction: row;
       justify-content: flex-end;
-      order: initial;
-      position: absolute;
-      right: 0;
-      margin-top: .3rem;
+      width: 50%;
     }
 
     li {
