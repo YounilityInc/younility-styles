@@ -48,17 +48,7 @@
   font-style: normal;
 }
 
-@mixin card-box($width: 'full') {
-  @if $width == 'half' {
-    @extend .col-xl-4;
-    @extend .col-lg-6;
-    @extend .col-md-6;
-  }
-
-  else {
-    @extend .col-xl-12;
-  }
-
+@mixin card-box() {
   background-color: $card-background;
   border: 1px solid $card-border;
   padding: 1rem;
@@ -186,7 +176,7 @@
     }
 
     >div {
-      @extend .col-xs-12;
+      @extend .col-sm-12;
       @include kill-padding();
       border: 1px solid $light-grey;
       background: $white;

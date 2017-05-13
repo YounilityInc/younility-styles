@@ -1,8 +1,8 @@
 
 // fonts
-@import 'glyphicons_pro/glyphicons';
-@import 'glyphicons_pro/glyphicons-halflings';
-@import 'octicons/octicons';
+@import 'vendors/glyphicons_pro/glyphicons';
+@import 'vendors/glyphicons_pro/glyphicons-halflings';
+@import 'vendors/octicons/octicons';
 
 // variables used later
 @import 'helpers/variables';
@@ -19,7 +19,7 @@
 @import 'components/actionbar';
 @import 'components/avatar';
 @import 'components/empty_state';
-@import 'components/topnav';
+@import 'components/navbar';
 @import 'components/dialog';
 @import 'components/status_badge';
 
@@ -35,4 +35,3 @@
 
 // vendor styles
 @import 'vendors/custom_kendo';
-@import 'vendors/bootstrap_select';

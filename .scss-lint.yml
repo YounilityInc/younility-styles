@@ -1,0 +1,31 @@
+exclude: 'assets/stylesheets/vendors/**'
+
+linters:
+
+  ColorVariable:
+    enabled: false
+
+  IdSelector:
+    enabled: false
+
+  ImportantRule:
+    enabled: false
+
+  NestingDepth:
+    enabled: false
+
+  PlaceholderInExtend:
+    enabled: false
+
+  PropertySortOrder:
+    enabled: false
+
+  SelectorDepth:
+    enabled: false
+
+  SingleLinePerProperty:
+    enabled: true
+    allow_single_line_rule_sets: false
+
+  TrailingZero:
+    enabled: true
