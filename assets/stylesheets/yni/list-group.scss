@@ -7,29 +7,29 @@
     cursor: pointer;
 
     @include hover-focus {
-      background: darken($grey-background, 15%);
+      background: darken($gray-lighter, 15%);
     }
 
     &.selected {
-      background: $medium-grey;
+      background: $gray-light;
       color: $black;
     }
 
     &.parent {
       @include font-bold();
-      border-bottom: 5px solid $light-grey;
+      border-bottom: 5px solid $gray-light;
 
       @include hover-focus {
-        background: darken($grey-background, 15%);
-        border-bottom: 5px solid $light-grey;
+        background: darken($gray-lighter, 15%);
+        border-bottom: 5px solid $gray-light;
 
         &:only-child {
-          border-bottom: 1px solid $light-grey;
+          border-bottom: 1px solid $gray-light;
         }
       }
 
       &:only-child {
-        border-bottom: 1px solid $light-grey;
+        border-bottom: 1px solid $gray-light;
       }
 
       a {
