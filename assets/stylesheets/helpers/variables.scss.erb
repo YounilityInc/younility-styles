@@ -2,25 +2,37 @@
 
 //Min Body Width
 $min-body-width:          320px;
+$top-nav-height:          65px;
+$top-nav-height-sm:       40px;
+$mobile-nav-height:       50px;
+$side-nav-width:          150px;
+$side-nav-width-md:       50px;
 
-//Font
+$footer-height:           50px;
+
+// Transition times
+$mobile-menu-transition:  300ms;
+
+//Fonts
 //
+
+$font-family-sans-serif: 'Open Sans', sans-serif;
+$font-family-icons:      'Glyphicons Halflings';
+$font-family-base:       $font-family-sans-serif !default;
+
 $default-font-size:       .875rem;
 $font-size-base:          $default-font-size;
 $font-size-sm:            .75rem;
 
 //Colors
 //
-//Core Colors
-$white:                   #fff;
-$black:                   #000;
-$light-grey:              #ccc;
-$medium-grey:             #ddd;
 
-// Application Colors
-$app-background:          #f5f5f5;
-$card-background:         $white;
-$card-border:             $light-grey;
+// Create grayscale
+$gray-dark:               #4a4a4a;
+$gray:                    #ccc;
+$gray-light:              #ddd;
+$gray-lighter:            #e0e0e0;
+$gray-lightest:           #f5f5f5;
 
 // Brand Colors
 $brand-accent:            #46505c;
@@ -41,8 +53,7 @@ $primary-focused:         #f69e66;
 $kendo-grid-tr-hover:     #dcdcdc;
 $kendo-light-grey:        #ebebeb;
 
-$kendo-background-grey:   $app-background;
-$grey-background:         #e0e0e0;
+$kendo-background-grey:   #eceeef;
 
 // Text Colours
 $text-colour:             #212121;
@@ -52,7 +63,12 @@ $blue-link:               #0275d8;
 
 //Icon Colours
 $light-icon:              #e9eef3;
-$dark-grey-icon:          #818a91;
+$dark-icon:               $gray-dark;
+
+// Input Colors
+$input-color:             $text-colour;
+$input-color-placeholder: #9b9b9b;
+$input-bg-disabled:       $light-icon;
 
 //Tooltip Color
 $tooltip-bg:              $brand-danger;
@@ -64,7 +80,7 @@ $status-created:          #d2d2d2;
 $status-dispatched:       #7f6289;
 $status-assigned:         #f0ad4e;
 $status-accepted:         #5cb85c;
-$status-closed:           #4a4a4a;
+$status-closed:           $gray-dark;
 $status-delivered:        #428bca;
 $status-verified:         #d04a72;
 $status-started:          #5bc0de;

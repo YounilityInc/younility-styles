@@ -88,7 +88,7 @@ textarea.k-textbox:hover {
     color: $text-colour
 }
 .ktb-var-hover-background {
-    color: $grey-background
+    color: $gray-lighter;
 }
 .ktb-var-selected-background {
     color: $kendo-accent
@@ -648,7 +648,7 @@ td.k-state-focused.k-state-selected {
     background: 0 0
 }
 .k-spreadsheet-popup .k-button:hover {
-    background-color: $grey-background
+    background-color: $gray-lighter;
 }
 .k-spreadsheet-formula-list .k-state-focused,
 .k-spreadsheet-popup .k-state-active {
@@ -656,10 +656,7 @@ td.k-state-focused.k-state-selected {
 }
 
 .k-grid {
-  table {
-    font-size: $font-size-sm;
-    min-width: map-get($grid-breakpoints, xl);
-  }
+  font-size: $font-size-sm;
 
   tr {
     height: 3rem;
@@ -708,4 +705,81 @@ td.k-state-focused.k-state-selected {
   .k-state-default {
     box-shadow: none;
   }
+}
+
+.k-i-arrow-s, .k-i-arrow-n, .k-i-arrow-e, .k-i-arrow-w,
+.k-i-seek-e, .k-i-seek-w {
+  background-image: none !important;
+  font-size: .5rem;
+  font-family: $font-family-icons;
+
+  &:before {
+    display: inline-block;
+    color: $black;
+    width: 16px;
+    height: 16px;
+    padding-top: .5rem;
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  .k-pager-numbers .k-current-page .k-link {
+
+    &:after {
+      background-image: none !important;
+      font-size: .5rem;
+      font-family: $font-family-icons;
+      content: '\e114' !important;
+      display: inline-block;
+      color: $black;
+      width: 16px;
+      height: 16px;
+      padding-top: .5rem;
+      top: 0 !important;
+    }
+
+  }
+}
+
+.k-state-disabled {
+  .k-i-arrow-s, .k-i-arrow-n, .k-i-arrow-e, .k-i-arrow-w,
+  .k-i-seek-e, .k-i-seek-w {
+    &:before {
+      color: $gray-light;
+    }
+  }
+}
+
+.k-i-seek-e, .k-i-seek-w {
+  width: 20px;
+  height: 20px;
+}
+
+.k-i-arrow-s:before {
+  content: '\e114';
+}
+.k-i-arrow-n:before {
+  content: '\e113';
+}
+.k-i-arrow-e:before {
+  content: '\e080';
+}
+.k-i-arrow-w:before {
+  content: '\e079';
+}
+.k-i-seek-e:before {
+  content: '\e080\e080';
+  padding-top: .6rem;
+}
+.k-i-seek-w:before {
+  content: '\e079\e079';
+  padding-top: .6rem;
+}
+
+.k-popup {
+  box-shadow: 0 1px 2px rgba(0,0,0,.2) !important;
+}
+
+.k-item {
+  border-radius: 0 !important;
 }

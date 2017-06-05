@@ -1,17 +1,32 @@
 // styles for user avatars
+.dark-initials-sm {
+  @include initials-variant($dark-icon, $light-icon, 1.6rem, .75rem)
+}
 
-.big-avatar {
-  width: 2em;
-  height: 2em;
-  border-radius: 3px;
-  background-color: $light-icon;
+.dark-initials-md {
+  @include initials-variant($dark-icon, $light-icon, 2.2rem, .9rem)
+}
 
-  //used for initials temporarily
-  .initials {
-    color: $text-colour;
-    font-size: 1rem;
-    padding-top: .25rem;
-    letter-spacing: 1px;
-    padding-bottom: 0;
-  }
+.dark-initials-lg {
+  @include initials-variant($dark-icon, $light-icon, 3rem, 1.1rem)
+}
+
+.dark-initials-xl {
+  @include initials-variant($dark-icon, $light-icon, 5rem, 1.7rem)
+}
+
+.light-initials-sm {
+  @include initials-variant($light-icon, $dark-icon, 1.6rem, .75rem)
+}
+
+.light-initials-md {
+  @include initials-variant($light-icon, $dark-icon, 2.2rem, .9rem)
+}
+
+.light-initials-lg {
+  @include initials-variant($light-icon, $dark-icon, 3rem, 1.1rem)
+}
+
+.light-initials-xl {
+  @include initials-variant($light-icon, $dark-icon, 5rem, 1.7rem)
 }
