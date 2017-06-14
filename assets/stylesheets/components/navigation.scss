@@ -340,7 +340,8 @@ header {
     margin-top: -.25rem;
 
     @include media-breakpoint-down(sm) {
-      @include initials-variant($light-icon, $dark-icon, 2.2rem, .9rem)
+      @include initials-variant($light-icon, $dark-icon, 2.2rem, .9rem);
+      margin-top: .1rem;
     }
   }
 
