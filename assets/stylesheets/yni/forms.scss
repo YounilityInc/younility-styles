@@ -16,6 +16,18 @@
   &[for]::after {
     content: ':';
   }
+
+  &.required {
+    position: relative;
+
+    &::before {
+      content: '*';
+      color: $brand-danger;
+      position: absolute;
+      right: -.7rem;
+      font-size: .7rem;
+    }
+  }
 }
 
 .parsley-errors-list {
@@ -31,9 +43,32 @@
   }
 }
 
+.custom-file-control {
+  &::before,
+  &::after {
+    @include font-semibold();
+    color: $text-disabled;
+  }
+
+  @each $lang, $text in map-get($custom-file-text, button-label) {
+    &.selected:lang(#{$lang})::after {
+      content: '' !important;
+    }
+  }
+}
+
 //Boostrap 4 changed from .has-error to .has-danger, making them equal.
 .has-error {
   @extend .has-danger;
+
+  .custom-file-control {
+    border-color: $brand-danger;
+
+    &::before {
+      border-color: $brand-danger;
+      color: $brand-danger;
+    }
+  }
 }
 
 .has-success .k-datetimepicker .k-picker-wrap,
