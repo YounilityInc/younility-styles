@@ -67,7 +67,7 @@ header {
       }
     }
 
-    .template-header {
+    .nav-header {
       display: none;
     }
 
@@ -148,7 +148,14 @@ header {
         @include media-breakpoint-only(md) {
           left: 66px;
           position: absolute;
-          top: 298px;
+
+          #templates-dropdown {
+            top: 298px;
+          }
+
+          #users-dropdown {
+            top: 358px;
+          }
         }
 
         .dropdown-item {
@@ -159,7 +166,7 @@ header {
           font-size: .8rem;
 
           @include media-breakpoint-only(md) {
-            &.template-header {
+            &.nav-header {
               display: block;
               background: $black;
               height: 60px;
