@@ -16,7 +16,8 @@ header {
 .side-navigation {
   @include font-light();
   background-color: $brand-accent-dk;
-  min-height: 100vh;
+  min-height: 500px;
+  height: 100vh;
   min-width: $side-nav-width;
   width: $side-nav-width;
   z-index: 10;
