@@ -1,0 +1,63 @@
+.collapse-group {
+  border-bottom: 1px solid $gray;
+  margin-bottom: 2rem;
+
+  .collapse-header {
+    cursor: pointer;
+    margin-bottom: 1rem;
+    position: relative;
+
+    h2 {
+      font-size: 1.5rem;
+
+      @include media-breakpoint-up(md) {
+        display: inline;
+      }
+    }
+
+    .hint {
+      @include font-light();
+      font-style: italic;
+      font-size: $default-font-size;
+      color: $input-color-placeholder;
+      line-height: 1.5rem;
+
+      @include media-breakpoint-up(md) {
+        margin-left: 1rem;
+      }
+    }
+
+    .toggle {
+      position: absolute;
+      right: 10px;
+
+      @include media-breakpoint-down(sm) {
+        top: 0;
+      }
+    }
+
+    &[aria-expanded='true'] {
+      .glyphicons-chevron-down {
+        display: none;
+      }
+
+      .glyphicons-chevron-up {
+        display: inline-block;
+      }
+    }
+
+    &[aria-expanded='false'] {
+      .glyphicons-chevron-down {
+        display: inline-block;
+      }
+
+      .glyphicons-chevron-up {
+        display: none;
+      }
+    }
+
+    + div {
+      margin-bottom: 2rem;
+    }
+  }
+}
