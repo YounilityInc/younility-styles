@@ -31,3 +31,24 @@
 .badge-started {
   @include status-badge($status-started);
 }
+
+.badge-queued {
+  @include status-badge($status-created);
+}
+
+.badge-in-progress {
+  @include status-badge($status-started);
+}
+
+.badge-completed {
+  @include status-badge($status-accepted);
+}
+
+.badge-partial {
+  @include status-badge($status-assigned);
+}
+
+.badge-failed {
+  @include status-badge($status-rejected);
+}
+
