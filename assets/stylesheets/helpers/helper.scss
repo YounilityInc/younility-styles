@@ -79,6 +79,15 @@
 
 .assignee {
   text-transform: capitalize;
+
+  div {
+    float: left;
+  }
+
+  .name {
+    line-height: 1.6rem;
+    padding-left: .5rem;
+  }
 }
 
 .full-width {

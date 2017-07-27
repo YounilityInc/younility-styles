@@ -656,7 +656,7 @@ td.k-state-focused.k-state-selected {
 }
 
 .k-grid {
-  font-size: $font-size-sm;
+  font-size: $font-size-table;
 
   tr {
     height: 3rem;
@@ -666,8 +666,10 @@ td.k-state-focused.k-state-selected {
     border-bottom: 0;
   }
 
+  .k-pager-wrap,
+  th.k-header,
   tr:hover {
-    background-color: $kendo-grid-tr-hover;
+    background-color: $gray-lightest;
   }
 }
 
