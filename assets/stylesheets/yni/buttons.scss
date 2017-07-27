@@ -23,7 +23,8 @@
 //Buttons that include icons, icons shouldn't have bottom or left padding
 .btn > .glyphicons::before,
 .dropdown-item > .glyphicons::before {
-  padding: 2px 8px 0 0;
+  padding: 0 8px 0 0;
+  font-size: .9rem;
 }
 
 .blue-link {
