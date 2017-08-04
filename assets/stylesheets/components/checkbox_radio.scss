@@ -56,6 +56,16 @@
   }
 }
 
+.minus [type='checkbox'] {
+  + span::before {
+    background: url($checkbox-minus-image-path) center no-repeat;
+  }
+
+  &:checked + span::before {
+    background: url($checkbox-minus-image-path) center no-repeat;
+  }
+}
+
 .checkbox label,
 .radio label {
   padding-left: 0;
