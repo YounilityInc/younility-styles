@@ -32,8 +32,12 @@
   @include status-badge($status-started);
 }
 
-.badge-queued {
+.badge-cancelled {
   @include status-badge($status-created);
+}
+
+.badge-queued {
+  @include status-badge($status-closed);
 }
 
 .badge-in-progress {
