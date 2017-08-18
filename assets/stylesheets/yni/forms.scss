@@ -1,10 +1,5 @@
 //Form overrides & extensions for Bootstrap 4 styles
 
-.form-control:focus {
-  border: $input-btn-border-width solid $input-border-color;
-  outline: none;
-}
-
 .btn:active,
 .btn:focus {
   outline: 0;
