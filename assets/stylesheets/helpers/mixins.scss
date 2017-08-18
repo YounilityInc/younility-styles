@@ -203,6 +203,7 @@
   vertical-align: baseline;
   border-radius: .25rem;
   background-color: $background;
+  user-select: none;
 }
 
 
@@ -212,6 +213,7 @@
   border: 1px solid $color;
   height: $size;
   width: $size;
+  user-select: none;
 
   .initials {
     letter-spacing: 1px;
