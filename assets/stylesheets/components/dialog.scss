@@ -2,7 +2,10 @@
 
 .dialog {
   .modal-dialog {
-    max-width: 380px;
+
+    &.modal-sm {
+      max-width: 380px;
+    }
 
     .modal-header .dialog-icon {
       height: 30px;
