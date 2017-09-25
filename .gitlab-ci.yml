@@ -1,5 +1,5 @@
 variables:
-  ARTIFACTS: "$CI_PROJECT_NAME-build$CI_BUILD_ID-artifacts"
+  ARTIFACTS: "$CI_PROJECT_NAME-build$CI_JOB_ID-artifacts"
   GEMCACHE: "10.250.2.142:9292"
   GEM_KEY: "pxGqrqLIqvldcFtm1kqcBzIZS0UR1AV8nyKwnFInJbDlYFN5gQ251VD3Lovj16kfCMRtz"
 
