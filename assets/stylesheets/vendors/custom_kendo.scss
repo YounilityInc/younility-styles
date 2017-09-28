@@ -693,6 +693,18 @@ td.k-state-focused.k-state-selected {
   }
 }
 
+.k-grid-header {
+  padding-right: 0px !important;
+}
+
+.k-grid-content {
+  overflow-y: auto;
+}
+
+.k-grid-header-wrap {
+  overflow-y: hidden;
+}
+
 .k-edit-cell {
   &:hover {
     &::after {
