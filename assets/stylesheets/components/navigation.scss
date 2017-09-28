@@ -93,6 +93,7 @@ header {
 
       > svg {
         display: block;
+        width: 114px;
         height: 38px;
 
         @include media-breakpoint-only(md) {
@@ -144,6 +145,7 @@ header {
         margin-top: .5rem;
         padding: 0;
         position: relative;
+        top: 0;
 
         @include media-breakpoint-only(md) {
           left: 66px;
