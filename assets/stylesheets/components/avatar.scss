@@ -4,7 +4,7 @@
 }
 
 .dark-initials-md {
-  @include initials-variant($dark-icon, $light-icon, 2.2rem, .9rem)
+  @include initials-variant($dark-icon, $light-icon, 2.2rem, 1rem)
 }
 
 .dark-initials-lg {
@@ -20,7 +20,7 @@
 }
 
 .light-initials-md {
-  @include initials-variant($light-icon, $dark-icon, 2.2rem, .9rem)
+  @include initials-variant($light-icon, $dark-icon, 2.2rem, 1rem)
 }
 
 .light-initials-lg {
