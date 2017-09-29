@@ -21,6 +21,7 @@ header {
   min-width: $side-nav-width;
   width: $side-nav-width;
   z-index: 10;
+  position: fixed;
 
   @include media-breakpoint-only(md) {
     width: $side-nav-width-md;
@@ -28,7 +29,7 @@ header {
   }
 
   @include media-breakpoint-down(sm) {
-    height: 100vh;
+    height: 100%;
     left: -$side-nav-width;
     position: absolute;
 
@@ -105,6 +106,7 @@ header {
 
           @include media-breakpoint-only(md) {
             display: block;
+            width: 42px;
           }
         }
       }
