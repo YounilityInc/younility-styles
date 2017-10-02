@@ -1,0 +1,141 @@
+//
+// Layout CSS file
+//
+
+body {
+  font-family: $font-family-sans-serif;
+  font-size: $default-font-size;
+  min-width: $min-body-width;
+
+  #site-wrapper {
+    display: flex;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    transition: left $mobile-menu-transition;
+  }
+
+  .app-content {
+    width: 100%;
+    padding-left: $side-nav-width;
+    min-width: 320px;
+
+    @include media-breakpoint-only(md) {
+      padding-left: $side-nav-width-md;
+    }
+
+    @include media-breakpoint-down(sm) {
+      padding-left: 0;
+    }
+
+    .wrap {
+      min-height: 100vh;
+      padding-bottom: $footer-height + 15;
+    }
+  }
+
+  main {
+    @extend .container-fluid;
+    padding-top: $top-nav-height + 20;
+
+    @include media-breakpoint-down(sm) {
+      padding-top: $top-nav-height-sm + $mobile-nav-height + 15;
+    }
+
+    &:not(.dashboard) {
+      padding-right: 1rem;
+      padding-left: 1rem;
+
+      >.row {
+        @include kill-margin();
+      }
+    }
+
+    &.dashboard {
+      padding-top: $top-nav-height;
+
+      @include media-breakpoint-down(sm) {
+        padding-top: $top-nav-height-sm + $mobile-nav-height;
+      }
+    }
+
+    h1 {
+      @extend .col-sm-12;
+      @include kill-padding();
+    }
+  }
+
+  .has-alerts main {
+    padding-top: $top-nav-height + 60;
+
+    @include media-breakpoint-down(sm) {
+      padding-top: $top-nav-height-sm + $mobile-nav-height + 50;
+    }
+
+    &.dashboard {
+      padding-top: $top-nav-height + 40;
+    }
+  }
+}
+
+.open-nav {
+  max-width: 100%;
+  overflow: hidden;
+
+  #site-wrapper {
+    left: $side-nav-width;
+  }
+
+  #menu-overlay {
+    @include media-breakpoint-down(sm) {
+      height: 100%;
+      overflow-x: hidden;
+      overflow-y: auto;
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      background-color: rgba(0, 0, 0, .65);
+      z-index: 120;
+      cursor: pointer;
+    }
+  }
+}
+
+@keyframes fade {
+  0% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: .1;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+.loading {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: $gray-lightest;
+  width: 100%;
+  height: 100%;
+  z-index: 200;
+  text-align: center;
+  line-height: 100vh;
+
+  svg {
+    animation: fade 3s ease infinite;
+    width: 200px;
+  }
+}
+
+.no-transitions {
+  transition-property: none !important;
+  transform: none !important;
+  animation: none !important;
+}
