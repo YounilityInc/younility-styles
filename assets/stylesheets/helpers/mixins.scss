@@ -192,18 +192,18 @@
 }
 
 @mixin status-badge ($background) {
-  display: inline-block;
-  padding: .25em .4em;
-  font-size: 85%;
   line-height: 1;
-  text-transform: uppercase;
-  color: $white;
-  text-align: center;
-  white-space: nowrap;
-  vertical-align: baseline;
-  border-radius: .25rem;
-  background-color: $background;
-  user-select: none;
+  text-transform: capitalize;
+
+  &::before {
+    display: inline-block;
+    width: 9px;
+    height: 9px;
+    border-radius: 9px;
+    margin-right: .5rem;
+    content: '';
+    background-color: $background;
+  }
 }
 
 
