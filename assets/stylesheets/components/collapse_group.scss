@@ -2,6 +2,11 @@
   border-bottom: 1px solid $gray;
   margin-bottom: 2rem;
 
+  &:only-child,
+  &:last-child {
+    border-bottom: 0;
+  }
+
   .collapse-header {
     cursor: pointer;
     margin-bottom: 1rem;
