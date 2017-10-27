@@ -1,54 +1,54 @@
 // Status Badges
 
 .badge-created {
-  @include status-badge($status-created);
+  @include status-badge(map-get($status-colors, 'created'));
 }
 
 .badge-dispatched {
-  @include status-badge($status-dispatched);
+  @include status-badge(map-get($status-colors, 'dispatched'));
 }
 
 .badge-assigned {
-  @include status-badge($status-assigned);
+  @include status-badge(map-get($status-colors, 'assigned'));
 }
 
 .badge-accepted {
-  @include status-badge($status-accepted);
+  @include status-badge(map-get($status-colors, 'accepted'));
 }
 
 .badge-closed {
-  @include status-badge($status-closed);
+  @include status-badge(map-get($status-colors, 'closed'));
 }
 
 .badge-delivered {
-  @include status-badge($status-delivered);
+  @include status-badge(map-get($status-colors, 'delivered'));
 }
 
 .badge-verified {
-  @include status-badge($status-verified);
+  @include status-badge(map-get($status-colors, 'verified'));
 }
 
 .badge-started {
-  @include status-badge($status-started);
+  @include status-badge(map-get($status-colors, 'started'));
 }
 
 .badge-queued {
-  @include status-badge($status-created);
+  @include status-badge(map-get($status-colors, 'created'));
 }
 
 .badge-in-progress {
-  @include status-badge($status-started);
+  @include status-badge(map-get($status-colors, 'started'));
 }
 
 .badge-completed {
-  @include status-badge($status-accepted);
+  @include status-badge(map-get($status-colors, 'accepted'));
 }
 
 .badge-partial {
-  @include status-badge($status-assigned);
+  @include status-badge(map-get($status-colors, 'assigned'));
 }
 
 .badge-failed {
-  @include status-badge($status-rejected);
+  @include status-badge(map-get($status-colors, 'failed'));
 }
 

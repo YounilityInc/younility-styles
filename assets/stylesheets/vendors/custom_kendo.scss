@@ -660,6 +660,14 @@ td.k-state-focused.k-state-selected {
 
   tr {
     height: 3rem;
+
+    &:last-of-type td {
+      border-width: 0 0 0 1px;
+
+      &:first-of-type {
+        border-width: 0;
+      }
+    }
   }
 
   tfoot {
@@ -691,6 +699,14 @@ td.k-state-focused.k-state-selected {
   .k-edit-cell {
     padding: .4em .6em;
   }
+}
+
+.k-grid tr td {
+  padding: .7rem .8rem;
+}
+
+.k-grid-header th.k-header {
+  padding: .7rem .8rem;
 }
 
 .k-grid-header {

@@ -193,7 +193,7 @@
 
 @mixin status-badge ($background) {
   line-height: 1;
-  text-transform: capitalize;
+  text-transform: uppercase;
 
   &::before {
     display: inline-block;
@@ -206,6 +206,41 @@
   }
 }
 
+
+@mixin btn-status ($background) {
+  @extend .btn;
+  @extend .btn-sm;
+
+  line-height: 15px;
+  height: 25px;
+  text-transform: uppercase;
+  background-color: map-get($status-colors, $background);
+  border-color: map-get($status-colors, $background);
+  color: $white;
+
+  // Hover and focus styles are shared
+  @include hover {
+    color: $white;
+    background-color: map-get($status-colors, $background + '-hover');
+    border-color: map-get($status-colors, $background + '-hover');
+  }
+
+  &.disabled,
+  &:disabled {
+    background-color: map-get($status-colors, $background + '-disabled');
+    border-color: map-get($status-colors, $background + '-disabled');
+    cursor: disabled;
+  }
+
+  > .glyphicons {
+    vertical-align: middle;
+
+    &::before {
+      padding: 0 0 2px 5px !important;
+      font-size: .7rem !important;
+    }
+  }
+}
 
 @mixin initials-variant($color, $text-color, $size, $text-size) {
   border-radius: 50%;

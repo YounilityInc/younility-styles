@@ -9,7 +9,7 @@
 
   .collapse-header {
     cursor: pointer;
-    margin-bottom: 1rem;
+    margin-bottom: 1.5rem;
     position: relative;
 
     h2 {
@@ -63,6 +63,16 @@
 
     + div {
       margin-bottom: 2rem;
+    }
+  }
+
+  .collapse > div {
+    margin-left: 2rem;
+    margin-right: 2rem;
+
+    @include media-breakpoint-down(sm) {
+      margin-left: 0;
+      margin-right: 0;
     }
   }
 }
