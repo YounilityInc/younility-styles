@@ -1,0 +1,50 @@
+// Status Badges
+
+.btn-start {
+  @include btn-status('started');
+}
+
+.btn-restart {
+  @include btn-status('started');
+}
+
+.btn-reset {
+  @include btn-status('created');
+}
+
+.btn-assign {
+  @include btn-status('assigned');
+}
+
+.btn-dispatch {
+  @include btn-status('dispatched');
+}
+
+.btn-close {
+  @include btn-status('closed');
+}
+
+.btn-deliver {
+  @include btn-status('delivered');
+}
+
+.btn-verify {
+  @include btn-status('verified');
+}
+
+.btn-recall,
+.btn-reject {
+  @include btn-status('rejected');
+  border-color: $black;
+  color: $black;
+
+  @include hover {
+    border-color: $gray;
+    color: #9b9b9b;
+  }
+
+  &.disabled,
+  &:disabled {
+    border-color: #9b9b9b;
+  }
+}

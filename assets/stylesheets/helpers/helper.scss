@@ -57,26 +57,6 @@
   text-overflow: ellipsis;
 }
 
-//Small Initials
-
-.initials-sm {
-  float: left;
-  background: $light-text;
-  border-radius: 3px;
-  text-transform: uppercase;
-  height: 1.3rem;
-  width: 1.3rem;
-  display: block;
-  line-height: 1.3rem;
-  text-align: center;
-
-  + span {
-    float: left;
-    line-height: 1.3rem;
-    margin-left: 5px;
-  }
-}
-
 .assignee {
   div {
     float: left;

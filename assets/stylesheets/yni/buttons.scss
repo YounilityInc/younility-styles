@@ -35,3 +35,35 @@
   background-color: $white;
   color: $gray-dark;
 }
+
+.btn-outline-gray {
+  @extend .btn;
+  @extend .col;
+  border-radius: 0;
+  background-color: $white;
+  border: 1px solid $gray;
+  color: $gray-medium;
+  font-size: .75rem;
+}
+
+.button-action-group {
+  @include media-breakpoint-up(md) {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+
+  .btn-action {
+    @extend .btn;
+    @extend .btn-outline-secondary;
+    @extend .btn-sm;
+
+    @include media-breakpoint-down(sm) {
+      margin-bottom: 1rem;
+    }
+
+    + .btn-action {
+      margin-left: .5rem;
+    }
+  }
+}

@@ -6,19 +6,11 @@
   border: 0;
   margin-bottom: 0;
 
-  &.alert-success .alert-content,
-  &.alert-danger .alert-content {
+  &.alert-success .alert-content {
     background-repeat: no-repeat;
     background-position: center left;
     padding-left: 1.75rem;
     background-size: 1rem 1rem;
-  }
-
-  &.alert-success .alert-content {
     background-image: $form-icon-success;
-  }
-
-  &.alert-danger .alert-content {
-    background-image: $form-icon-danger;
   }
 }

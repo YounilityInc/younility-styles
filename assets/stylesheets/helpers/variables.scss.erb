@@ -30,6 +30,7 @@ $font-size-table:         .8rem;
 
 // Create grayscale
 $gray-dark:               #4a4a4a;
+$gray-medium:             #9b9b9b;
 $gray:                    #ccc;
 $gray-light:              #ddd;
 $gray-lighter:            #e0e0e0;
@@ -68,7 +69,7 @@ $dark-icon:               #4a4a4a;
 
 // Input Colors
 $input-color:             $text-colour;
-$input-color-placeholder: #9b9b9b;
+$input-color-placeholder: $gray-medium;
 $input-bg-disabled:       $light-icon;
 
 //Tooltip Color
@@ -76,16 +77,40 @@ $tooltip-bg:              $dark-icon;
 $tooltip-arrow-color:     $dark-icon;
 $tooltip-opacity:         1;
 
-// Custom Status Badge Colors
-$status-created:          #d2d2d2;
-$status-dispatched:       #7f6289;
-$status-assigned:         #f0ad4e;
-$status-accepted:         #5cb85c;
-$status-closed:           $gray-dark;
-$status-delivered:        #428bca;
-$status-verified:         #d04a72;
-$status-started:          #5bc0de;
-$status-rejected:         #d0021b;
+
+$status-colors: (
+  // Custom Status Badge Colors
+  created:          #cccccc,
+  dispatched:       #7f6289,
+  assigned:         #f0ad4e,
+  accepted:         #5cb85c,
+  closed:           #4a4a4a,
+  delivered:        #428bca,
+  verified:         #d04a72,
+  started:          #5bc0de,
+  rejected:         #ffffff,
+  failed:           #d9534f,
+
+  // Custom Status Badge Colors Disabled
+  created-disabled:          #dcdbdb,
+  dispatched-disabled:       #cbaed5,
+  assigned-disabled:         #fdb652,
+  closed-disabled:           #969696,
+  delivered-disabled:        #84aed3,
+  verified-disabled:         #d88ea4,
+  started-disabled:          #a9d6e3,
+  rejected-disabled:         #e7e7e7,
+
+  // Custom Status Badge Colors Hover
+  created-hover:          #b2b2b2,
+  dispatched-hover:       #67506f,
+  assigned-hover:         #d69b46,
+  closed-hover:           #333333,
+  delivered-hover:        #3a79b0,
+  verified-hover:         #b64164,
+  started-hover:          #68cdeb,
+  rejected-hover:         #e5e5e5
+);
 
 // Spacing
 //
