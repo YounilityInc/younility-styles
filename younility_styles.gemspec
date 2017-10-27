@@ -7,8 +7,8 @@ require 'younility_styles/version'
 Gem::Specification.new do |spec|
   spec.name          = 'younility_styles'
   spec.version       = YounilityStyles::VERSION
-  spec.authors       = ['David Underwood']
-  spec.email         = ['david.underwood@younility.com']
+  spec.authors       = ['Younility Inc']
+  spec.email         = ['developer@younility.com']
 
   spec.summary       = 'Style definitions for Younility web-apps'
   spec.homepage      = 'https://younility.githost.io/platform/younility-styles'
