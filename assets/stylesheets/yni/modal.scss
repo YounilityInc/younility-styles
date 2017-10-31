@@ -1,6 +1,23 @@
 //Modal overrides & extensions for Bootstrap 4 styles
+.modal-header {
+  @include font-light();
+  background: $brand-primary;
+  color: $white;
+  text-transform: uppercase;
+
+  .close {
+    @include font-regular();
+    color: $white;
+    opacity: 1;
+  }
+}
 
 .modal-content {
   border-radius: 0;
   border: 0;
+}
+
+.modal-body {
+  float: left;
+  width: 100%;
 }
