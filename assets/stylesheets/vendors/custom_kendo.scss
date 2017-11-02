@@ -769,14 +769,6 @@ td.k-state-focused.k-state-selected {
   }
 }
 
-.k-grid-filter.k-state-active {
-  background-color: $gray-lightest;
-}
-
-.k-filter-help-text {
-  line-height: 2rem;
-}
-
 .k-grid tbody:empty::before,
 .k-grid tbody:empty::before {
   content: 'No results found.';
@@ -804,6 +796,27 @@ td.k-state-focused.k-state-selected {
 .k-dropdown-wrap,
 .k-datetimepicker {
   border-style: initial;
+}
+
+.k-grid-filter.k-state-active {
+  background-color: $gray-lightest;
+  box-shadow: none;
+}
+
+.k-filter-menu {
+  min-width: 165px;
+
+  .k-dropdown-wrap {
+    border-style: solid;
+  }
+
+  .k-widget {
+    width: 100%;
+  }
+}
+
+.k-filter-help-text {
+  line-height: 2rem;
 }
 
 .k-i-arrow-s, .k-i-arrow-n, .k-i-arrow-e, .k-i-arrow-w,
