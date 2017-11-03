@@ -21,3 +21,8 @@
   float: left;
   width: 100%;
 }
+
+.modal .success-msg,
+.modal .errors {
+  display: none;
+}
