@@ -61,6 +61,7 @@
   &::after {
     @include font-semibold();
     color: $text-disabled;
+    line-height: 1.5rem;
   }
 
   @each $lang, $text in map-get($custom-file-text, button-label) {
