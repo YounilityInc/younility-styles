@@ -52,3 +52,56 @@
   @include status-badge(map-get($status-colors, 'failed'));
 }
 
+// Small Status Badges
+.badge-created-sm {
+  @include status-badge-sm(map-get($status-colors, 'created'));
+}
+
+.badge-dispatched-sm {
+  @include status-badge-sm(map-get($status-colors, 'dispatched'));
+}
+
+.badge-assigned-sm {
+  @include status-badge-sm(map-get($status-colors, 'assigned'));
+}
+
+.badge-accepted-sm {
+  @include status-badge-sm(map-get($status-colors, 'accepted'));
+}
+
+.badge-closed-sm {
+  @include status-badge-sm(map-get($status-colors, 'closed'));
+}
+
+.badge-delivered-sm {
+  @include status-badge-sm(map-get($status-colors, 'delivered'));
+}
+
+.badge-verified-sm {
+  @include status-badge-sm(map-get($status-colors, 'verified'));
+}
+
+.badge-started-sm {
+  @include status-badge-sm(map-get($status-colors, 'started'));
+}
+
+.badge-queued-sm {
+  @include status-badge-sm(map-get($status-colors, 'created'));
+}
+
+.badge-in-progress-sm {
+  @include status-badge-sm(map-get($status-colors, 'started'));
+}
+
+.badge-completed-sm {
+  @include status-badge-sm(map-get($status-colors, 'accepted'));
+}
+
+.badge-partial-sm {
+  @include status-badge-sm(map-get($status-colors, 'assigned'));
+}
+
+.badge-failed-sm {
+  @include status-badge-sm(map-get($status-colors, 'failed'));
+}
+
