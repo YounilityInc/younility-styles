@@ -56,10 +56,18 @@
   }
 }
 
+.custom-file-input {
+  cursor: pointer;
+}
+
 .custom-file-control {
-  &::before,
   &::after {
-    @include font-semibold();
+    color: $text-disabled;
+    line-height: 1.5rem;
+  }
+
+  &::before {
+    background-color: $white;
     color: $text-disabled;
     line-height: 1.5rem;
   }
@@ -81,6 +89,10 @@
     &::before {
       border-color: $brand-danger;
       color: $brand-danger;
+    }
+
+    .parsley-errors-list {
+      cursor: normal;
     }
   }
 }
