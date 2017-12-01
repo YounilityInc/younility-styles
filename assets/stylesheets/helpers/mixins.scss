@@ -206,6 +206,10 @@
   }
 }
 
+@mixin status-badge-sm ($background) {
+  @include status-badge($background);
+  font-size: $font-size-sm;
+}
 
 @mixin btn-status ($background) {
   @extend .btn;
