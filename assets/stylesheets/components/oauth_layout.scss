@@ -1,0 +1,108 @@
+.welcome-layout {
+  background-color: $gray-lightest;
+
+  .app-content {
+    padding-left: 0;
+  }
+}
+
+.welcome {
+  @include kill-padding();
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+
+  @include media-breakpoint-up(sm) {
+    flex-direction: row;
+  }
+
+  .form-box {
+    @extend .col-lg-8;
+    @extend .col-sm-10;
+    @include kill-padding();
+    z-index: 100;
+
+    .content {
+      background-color: $white;
+      width: 100%;
+      margin: 0 auto;
+
+      @include media-breakpoint-up(sm) {
+        max-width: 500px;
+        width: 75%;
+        margin-top: 15%;
+      }
+
+      .form-row {
+        padding: 1rem;
+        border: 1px solid $gray-light;
+        border-bottom: 0;
+        height: 5rem;
+
+        &:first-of-type {
+          height: auto;
+        }
+
+        &:last-of-type {
+          border-bottom: 1px solid $gray-light;
+        }
+
+        .title {
+          @extend .lead;
+          font-weight: normal;
+          text-transform: uppercase;
+        }
+
+        .login {
+          @extend .btn;
+          @extend .btn-primary;
+          margin-left: auto;
+        }
+
+        .register {
+          @extend .btn;
+          @extend .btn-outline-primary;
+        }
+
+        span {
+          text-transform: uppercase;
+        }
+
+        p {
+          @include kill-margin();
+          line-height: 2.5rem;
+
+          @media (max-width: 380px) {
+            line-height: 1.5rem;
+          }
+        }
+
+        .link {
+          @extend .blue-link;
+          @include font-semibold;
+        }
+
+        .more-info {
+          @extend .blue-link;
+        }
+      }
+
+      .form-row-form {
+        @extend .form-row;
+        height: auto;
+      }
+
+      svg {
+        max-width: 15em;
+      }
+    }
+  }
+
+  .info-box {
+    @extend .col-lg-4;
+    @extend .col-sm-2;
+    @include kill-padding();
+    background: $kendo-grid-tr-hover;
+    height: 100%;
+  }
+}
