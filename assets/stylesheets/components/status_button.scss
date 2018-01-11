@@ -8,11 +8,13 @@
   @include btn-status('started');
 }
 
-.btn-reset {
+.btn-reset,
+.btn-unassign {
   @include btn-status('created');
 }
 
-.btn-assign {
+.btn-assign,
+.btn-reassign {
   @include btn-status('assigned');
 }
 
@@ -47,4 +49,8 @@
   &:disabled {
     border-color: #9b9b9b;
   }
+}
+
+.btn-complete {
+  @include btn-status('accepted');
 }
