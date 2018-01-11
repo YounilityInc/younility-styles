@@ -1,6 +1,7 @@
 // Status Badges
 
-.badge-created {
+.badge-created,
+.badge-unassigned {
   @include status-badge(map-get($status-colors, 'created'));
 }
 
@@ -12,7 +13,8 @@
   @include status-badge(map-get($status-colors, 'assigned'));
 }
 
-.badge-accepted {
+.badge-accepted,
+.badge-completed {
   @include status-badge(map-get($status-colors, 'accepted'));
 }
 
@@ -40,10 +42,6 @@
   @include status-badge(map-get($status-colors, 'started'));
 }
 
-.badge-completed {
-  @include status-badge(map-get($status-colors, 'accepted'));
-}
-
 .badge-partial {
   @include status-badge(map-get($status-colors, 'assigned'));
 }
@@ -53,7 +51,8 @@
 }
 
 // Small Status Badges
-.badge-created-sm {
+.badge-created-sm,
+.badge-unassigned-sm {
   @include status-badge-sm(map-get($status-colors, 'created'));
 }
 
@@ -65,7 +64,8 @@
   @include status-badge-sm(map-get($status-colors, 'assigned'));
 }
 
-.badge-accepted-sm {
+.badge-accepted-sm,
+.badge-completed-sm {
   @include status-badge-sm(map-get($status-colors, 'accepted'));
 }
 
@@ -91,10 +91,6 @@
 
 .badge-in-progress-sm {
   @include status-badge-sm(map-get($status-colors, 'started'));
-}
-
-.badge-completed-sm {
-  @include status-badge-sm(map-get($status-colors, 'accepted'));
 }
 
 .badge-partial-sm {
