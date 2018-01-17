@@ -16,3 +16,6 @@ Style/MethodDefParentheses:
 # Disable this cop to avoid the 'frozen_string_literal: true' comment on top of every file.
 Style/FrozenStringLiteralComment:
   Enabled: false
+
+Documentation:
+  Enabled: false
