@@ -45,7 +45,7 @@ scsslint:
     - gem install bundler
     - bundle config mirror.https://rubygems.org http://$GEMCACHE
     - bundle install --clean --path=vendor/bundle --jobs=4 --retry=3
-    - bundle exec scss-lint assets/stylesheets/
+    - bundle exec scss-lint vendor/assets/stylesheets/
 
 buildAndPublish:
   <<: *jobTemplate

@@ -1,4 +1,4 @@
-exclude: 'assets/stylesheets/vendors/**'
+exclude: 'vendor/assets/stylesheets/vendors/**'
 
 linters:
 
