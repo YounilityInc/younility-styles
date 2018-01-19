@@ -798,6 +798,10 @@ td.k-state-focused.k-state-selected {
   border-style: initial;
 }
 
+.k-picker-wrap .k-input {
+  height: auto;
+}
+
 .k-grid-filter.k-state-active {
   background-color: $gray-lightest;
   box-shadow: none;
