@@ -104,5 +104,11 @@
     @include kill-padding();
     background: $kendo-grid-tr-hover;
     height: 100%;
+    background-image: url("<%= image_path('banner.jpg') %>");
+    background-size: cover;
+    background-position: right;
+    @include media-breakpoint-down(md) {
+      background-position: right 15% bottom;
+    }
   }
 }
