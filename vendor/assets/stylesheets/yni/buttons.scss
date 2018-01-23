@@ -66,4 +66,12 @@
       margin-left: .5rem;
     }
   }
+
+  .btn-action-orange {
+    @extend .btn-action;
+
+    background-color: $brand-primary;
+    color: $white;
+    border: $brand-primary;
+  }
 }
