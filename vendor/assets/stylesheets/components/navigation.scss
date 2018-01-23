@@ -80,6 +80,7 @@ header {
       span {
         display: table-cell;
         vertical-align: middle;
+        letter-spacing: .5px;
 
         + span {
           @include media-breakpoint-only(md) {
