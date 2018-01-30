@@ -21,6 +21,9 @@
     @extend .col-sm-10;
     @include kill-padding();
     z-index: 100;
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
 
     .content {
       background-color: $white;
@@ -31,6 +34,12 @@
         max-width: 500px;
         width: 75%;
         margin-top: 15%;
+      }
+
+      .form-row-form .instructions,
+      #app-links {
+        line-height: normal;
+        padding-bottom: 1rem;
       }
 
       .form-row {
@@ -90,12 +99,24 @@
       .form-row-form {
         @extend .form-row;
         height: auto;
+
+        .dark-initials-lg .initials {
+          line-height: 3rem;
+        }
       }
 
       svg {
         max-width: 15em;
       }
     }
+
+    .top-section {
+      flex: 1;
+    }
+  }
+
+  #change_user_form {
+    padding-top: .5rem;
   }
 
   .info-box {
