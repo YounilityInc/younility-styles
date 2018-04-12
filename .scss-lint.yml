@@ -1,4 +1,4 @@
-exclude: 'vendor/assets/stylesheets/vendors/**'
+exclude: 'vendor/assets/stylesheets/younility_styles/vendors/**'
 
 linters:
 

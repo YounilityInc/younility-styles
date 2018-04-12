@@ -1,2 +1,2 @@
 //= require bootstrap
-//= require kendo_grid_helper
+//= require younility_styles/kendo_grid_helper

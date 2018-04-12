@@ -1,42 +1,42 @@
 
 // fonts
-@import 'vendors/glyphicons_pro/glyphicons';
-@import 'vendors/glyphicons_pro/glyphicons-halflings';
+@import 'younility_styles/vendors/glyphicons_pro/glyphicons';
+@import 'younility_styles/vendors/glyphicons_pro/glyphicons-halflings';
 
 // variables used later
-@import 'helpers/variables';
+@import 'younility_styles/helpers/variables';
 
 // bootstrap
 @import 'bootstrap';
 
 // other helpers
-@import 'helpers/mixins';
-@import 'helpers/helper';
+@import 'younility_styles/helpers/mixins';
+@import 'younility_styles/helpers/helper';
 
 // page components
-@import 'components/checkbox_radio';
-@import 'components/actionbar';
-@import 'components/avatar';
-@import 'components/empty_state';
-@import 'components/navigation';
-@import 'components/dialog';
-@import 'components/status_badge';
-@import 'components/status_button';
-@import 'components/collapse_group';
-@import 'components/oauth_layout';
+@import 'younility_styles/components/checkbox_radio';
+@import 'younility_styles/components/actionbar';
+@import 'younility_styles/components/avatar';
+@import 'younility_styles/components/empty_state';
+@import 'younility_styles/components/navigation';
+@import 'younility_styles/components/dialog';
+@import 'younility_styles/components/status_badge';
+@import 'younility_styles/components/status_button';
+@import 'younility_styles/components/collapse_group';
+@import 'younility_styles/components/oauth_layout';
 
 //younility main layout
-@import 'layout';
+@import 'younility_styles/layout';
 
 //younilty bootstrap overrides & extentions
-@import 'yni/type';
-@import 'yni/alert';
-@import 'yni/buttons';
-@import 'yni/flex';
-@import 'yni/forms';
-@import 'yni/list-group';
-@import 'yni/modal';
-@import 'yni/nav';
+@import 'younility_styles/yni/type';
+@import 'younility_styles/yni/alert';
+@import 'younility_styles/yni/buttons';
+@import 'younility_styles/yni/flex';
+@import 'younility_styles/yni/forms';
+@import 'younility_styles/yni/list-group';
+@import 'younility_styles/yni/modal';
+@import 'younility_styles/yni/nav';
 
 // vendor styles
-@import 'vendors/custom_kendo';
+@import 'younility_styles/vendors/custom_kendo';

@@ -1,3 +1,3 @@
 module YounilityStyles
-  VERSION = '1.0.9'.freeze
+  VERSION = '2.0.0'.freeze
 end
